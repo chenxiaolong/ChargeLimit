@@ -19,7 +19,9 @@ ChargeLimit has no UI and does not show up in the launcher. It is only a quick s
 
 * Only works with Google Pixel devices (Tensor SOC) and Android versions (>= 15 QPR1) where Google officially supports the charge limit feature.
 * There are no configuration options because the `google_battery` HAL does not expose anything more than an on/off switch for the charge limit feature. It is possible to implement fancier charge limit functionality by ignoring the `google_battery` HAL and configuring the USB controller directly, but this will never be supported in ChargeLimit.
-* As a side effect of not running a background service, when switching between two Android users that are already unlocked, the charge limit setting does not get applied. This only matters when the device is not running the stock Pixel OS and the users have different charge limit settings. This can be worked around by opening the quick settings panel once (without tapping on anything) after switching users.
+* Issues that only happen when not running the stock Pixel OS:
+    * When the device is plugged in, the battery icon in the status bar will always show the shield and the lock screen will show `Charging on hold to protect battery`, even while the device is still charging. The logic to show better icons and messages are sadly part of Pixel OS' proprietary components, not in AOSP.
+    * As a side effect of not running a background service, when switching between two Android users that are already unlocked, the charge limit setting does not get applied. This only matters when the users have different charge limit settings. This can be worked around by opening the quick settings panel once (without tapping on anything) after switching users.
 * **I plan to stop maintaining this project once GrapheneOS has a native charge limit feature because I'll no longer have a user for it.**
 
 ## Usage
