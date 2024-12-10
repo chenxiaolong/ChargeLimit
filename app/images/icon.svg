@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 -960 960 960">
+
+    <circle fill="#43A047" cx="50%" cy="-50%" r="50%" />
+
+    <!--
+        Make this match the Android icon exactly. Android adaptive icons take the inner (centered)
+        2/3rds of the foreground's viewbox and crop out the rest [1].
+
+        ic_foreground is at 1/2 scale and then cropped to 2/3rds of the original viewbox, so it
+        takes up (1/2) / (2/3) = 3/4 of the cropped viewbox. In this SVG version, we don't crop.
+        Instead, the full size icon is scaled down to 3/4 to match.
+
+        [1] https://cs.android.com/android/platform/superproject/+/android-13.0.0_r31:frameworks/base/graphics/java/android/graphics/drawable/AdaptiveIconDrawable.java;l=106
+    -->
+
+    <g transform-origin="50% -50%" transform="scale(0.75 0.75)">
+        <path
+            fill="#ffffff"
+            d="M333.85-100q-15.37 0-25.76-10.4-10.4-10.39-10.4-25.76v-618.07q0-15.37 10.4-25.76 10.39-10.39 25.76-10.39h72.3V-860h147.7v69.62h72.38q15.38 0 25.73 10.39t10.35 25.76v278.08q-92.7 6-156.73 73.19-64.04 67.19-64.04 161.81 0 39.84 12.54 75.84 12.53 36 35.77 65.31h-156Zm23.84-455.38h244.62v-175.39H357.69v175.39ZM661.54-90.39v-112.69h-80.77l117.69-186.53v112.69h80.77L661.54-90.39Z" />
+    </g>
+</svg>

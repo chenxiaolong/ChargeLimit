@@ -1,0 +1,27 @@
+[advisories]
+version = 2
+yanked = "deny"
+
+[licenses]
+version = 2
+include-dev = true
+allow = [
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "GPL-3.0",
+    "ISC",
+    "LGPL-2.1",
+    "MIT",
+    "Unicode-3.0",
+]
+
+[bans]
+multiple-versions = "warn"
+multiple-versions-include-dev = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-git = [
+    "https://github.com/chenxiaolong/sepatch",
+]
