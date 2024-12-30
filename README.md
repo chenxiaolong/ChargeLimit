@@ -1,3 +1,5 @@
+**2024-12-30 update**: As promised, this project is discontinued now that GrapheneOS supports enabling the 80% battery charge limit.
+
 # ChargeLimit
 
 <img src="app/images/icon.svg" alt="app icon" width="72" />
